@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty and Staff</title>
+    <link rel="stylesheet" href="/css/homestyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/faculty.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+</head>
+
+<body>
+    <nav class="header flex justify-between items-center p-4">
+        <div class="upperpart">
+          <div class="first">
+            <div class="home">
+              <p class="text-lg font-bold" style="cursor:pointer;" onclick="window.location.href='index.html'">Home</p>
+            </div>
+            <div class="upperleft">
+              <p class="text-lg font-bold" style="cursor:pointer;" onclick="window.location.href='facultyandstaff.html'">
+                Faculty & Staff</p>
+            </div>
+            <div class="uppermiddle">
+              <p style="cursor: pointer;" class="text-lg font-bold" onclick="window.location.href='alumni.html'">Alumni</p>
+            </div>
+            <div class="acedemics">
+              <p class="text-lg font-bold" style="cursor: pointer;" onclick="window.location.href='acedemics.html'">
+                Acedemics</p>
+            </div>
+    
+          </div>
+    
+          <div class="uppersocialmedia" style="align-items: center; display: flex; justify-content:end;">
+            <img src="../img/facebook image1.png" style="width: 10%; cursor: pointer;" alt=""
+              onclick="window.location.href='https://www.facebook.com/makalu.arun'">
+            <img src="../img/Youtube imagge.png" style="width: 10%; cursor:pointer;"
+              onclick="window.location.href='https://www.youtube.com/@eakughimire5118/featured'">
+          </div>
+        </div>
+    
+        <div class="lowerpart">
+          <div class="lowerleft">
+            <img src="../img/makaluarunlogo1.png" alt="Makalu Arun School logo" class="w-20" style="width: 100%; ">
+          </div>
+          <div class="lowermiddle">
+            <p class="text-lg font-bold" style="cursor: pointer;" onclick="window.location.href='about.html'">About</p>
+          </div>
+          <div class="admission">
+            <p class="admission paragraph" style="cursor:pointer;" onclick="window.location.href='admission.html'">
+              Admission
+            </p>
+    
+          </div>
+    
+          <div class="calender">
+            <p style="cursor: pointer;" onclick="window.location.href='academiccalender.html'">Academic Calendar</p>
+          </div>
+        </div>
+      </nav>
+    
+    
+      <nav class="mobileheader">
+        <div class="mobiledefault">
+          <div class="mobileleft">
+            <img src="../img/makaluarunlogo1.png" alt="Makalu Arun School logo" class="w-20" style="width: 100%; ">
+    
+    
+          </div>
+          <!-- Hamburger icon -->
+          <div class="hamburger-icon" id="hamburger" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+    
+        </div>
+        <div class="mobilemenu" id="mobileMenu">
+          <div class="mobileli">
+            <p class="text-lg font-bold" style="cursor:pointer;" onclick="window.location.href='index.html'">Home</p>
+          </div>
+          <div class="mobileli">
+            <p class="text-lg font-bold" style="cursor:pointer;" onclick="window.location.href='facultyandstaff.html'">
+              Faculty & Staff</p>
+          </div>
+          <div class="mobileli">
+            <p style="cursor: pointer;" class="text-lg font-bold" onclick="window.location.href='alumni.html'">Alumni</p>
+          </div>
+          <div class="mobileli">
+            <p class="text-lg font-bold" style="cursor: pointer;" onclick="window.location.href='acedemics.html'">
+              Acedemics</p>
+          </div>
+    
+          <div class="mobileli">
+            <p class="text-lg font-bold" style="cursor: pointer;" onclick="window.location.href='about.html'">About</p>
+          </div>
+          <div class="mobileli">
+            <p class="admission paragraph" style="cursor:pointer;" onclick="window.location.href='admission.html'">
+              Admission
+            </p>
+    
+          </div>
+    
+          <div class="mobileli">
+            <p style="cursor: pointer;" onclick="window.location.href='academiccalender.html'">Academic Calendar</p>
+          </div>
+        </div>
+    
+       <script>
+        function toggleNav() {
+          var mobileMenu = document.getElementById("mobileMenu");
+      var hamburgerIcon = document.getElementById("hamburger");
+      
+      if (mobileMenu.style.display === "block") {
+        mobileMenu.style.display = "none";
+        hamburgerIcon.classList.remove("active");
+      } else {
+        mobileMenu.style.display = "block";
+        hamburgerIcon.classList.add("active");
+      }
+    }
+    
+       </script>
+    
+      </nav>
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          // Click event for menu items
+          $(".menu-item a").on("click", function (event) {
+            event.preventDefault();
+            const targetUrl = $(this).attr("href");
+            window.location.href = targetUrl;
+          });
+    
+          // Click event for social media links
+          $(".uppersocialmedia a").on("click", function (event) {
+            event.preventDefault();
+            const targetUrl = $(this).attr("href");
+            window.open(targetUrl, "_blank");
+          });
+        });
+      </script>
+    
+    <section>
+
+        <div class="heading">
+            <h2>Teachers in Makalu Arun School</h2>
+        </div>
+        <div class="teachers">
+            <div class="teacher" id="teacher1">
+                <div class="details">
+                    <img src="/img/stars.jpg" alt="profile">
+                    <h3>Teaher's name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi facilis, dolorum nobis
+                        perspiciatis sunt, libero saepe minima, necessitatibus incidunt culpa exercitationem ad. Fugit
+                        quasi, nostrum molestiae corporis delectus veritatis.
+                    </p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Qualifications:</td>
+                            <td> Teaching Experience: </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Master's In English</td>
+                            <td> 16 yrs+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="teacher" id="teacher2">
+                <div class="details">
+                    <img src="/img/stars.jpg" alt="profile">
+                    <h3>Teaher's name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi facilis, dolorum nobis
+                        perspiciatis sunt, libero saepe minima, necessitatibus incidunt culpa exercitationem ad. Fugit
+                        quasi, nostrum molestiae corporis delectus veritatis.
+                    </p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Qualifications:</td>
+                            <td> Teaching Experience: </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Master's In English</td>
+                            <td> 16 yrs+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="teacher" id="teacher3">
+                <div class="details">
+                    <img src="/img/stars.jpg" alt="profile">
+                    <h3>Teaher's name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi facilis, dolorum nobis
+                        perspiciatis sunt, libero saepe minima, necessitatibus incidunt culpa exercitationem ad. Fugit
+                        quasi, nostrum molestiae corporis delectus veritatis.
+                    </p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Qualifications:</td>
+                            <td> Teaching Experience: </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Master's In English</td>
+                            <td> 16 yrs+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="teacher" id="teacher4">
+                <div class="details">
+                    <img src="/img/stars.jpg" alt="profile">
+                    <h3>Teaher's name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi facilis, dolorum nobis
+                        perspiciatis sunt, libero saepe minima, necessitatibus incidunt culpa exercitationem ad. Fugit
+                        quasi, nostrum molestiae corporis delectus veritatis.
+                    </p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Qualifications:</td>
+                            <td> Teaching Experience: </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Master's In English</td>
+                            <td> 16 yrs+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="teacher" id="teacher5">
+                <div class="details">
+                    <img src="/img/stars.jpg" alt="profile">
+                    <h3>Teaher's name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi facilis, dolorum nobis
+                        perspiciatis sunt, libero saepe minima, necessitatibus incidunt culpa exercitationem ad. Fugit
+                        quasi, nostrum molestiae corporis delectus veritatis.
+                    </p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Qualifications:</td>
+                            <td> Teaching Experience: </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Master's In English</td>
+                            <td> 16 yrs+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="teacher" id="teacher6">
+                <div class="details">
+                    <img src="/img/stars.jpg" alt="profile">
+                    <h3>Teaher's name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi facilis, dolorum nobis
+                        perspiciatis sunt, libero saepe minima, necessitatibus incidunt culpa exercitationem ad. Fugit
+                        quasi, nostrum molestiae corporis delectus veritatis.
+                    </p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Qualifications:</td>
+                            <td> Teaching Experience: </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Master's In English</td>
+                            <td> 16 yrs+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="teacher" id="teacher7"></div>
+            <div class="teacher" id="teacher8"></div>
+            <div class="teacher" id="teacher9"></div>
+            <div class="teacher" id="teacher10"></div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="firstfooter">
+            <div class="firstfooterleft">
+                <a href="mailto:info@makaluarun.com">
+                    <div class="contactimage"><img src="/img/mail.png" alt="mail">
+                        <p>info@makaluarun.com</p>
+                    </div>
+                </a>
+                <a href="tel:986228653">
+                    <div class="contactimage"><img src="/img/phone.png" alt="phoneimage">
+                        <p>All Nepal phone No:9862281653</p>
+                    </div>
+                </a>
+                <a href="https://wa.me/9862281653">
+                    <div class="contactimage"><img src="/img/whatsapp.png" alt="whatsapp">
+                        <p>whatsapp: 9862281653</p>
+                    </div>
+                </a>
+
+                <div class="follow">
+                    <p>Follow Us:</p> <br>
+                    <a href="https://www.facebook.com/makalu.arun"><img src="/img/facebook image.png"
+                            alt="facebook image"></a>
+                </div>
+            </div>
+            <div class="firstfooterright">
+                <h4>Need Help?</h4>
+
+                <p><a href="faq.html" target="_blank">FAQs</a>
+                </p>
+
+            </div>
+        </div>
+        <div class="secondfooter">
+            <p>&copy; https://makaluarunschool.edu.np. Education for Creative Knowledge and Skills. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
