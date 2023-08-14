@@ -1,0 +1,78 @@
+/* Section */
+section{
+    background: url(/img/background3.png);
+    background-size: 100%;
+
+}
+
+/* heading  */
+ .heading{
+    margin-top: 30px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 70px 0px;
+    padding-bottom: 30px;
+ }
+/* Teachers */
+.teachers{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+.teachers img{
+    width: 20%;
+    height: 20%;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+/* Teacher  */
+.teacher{
+    background-color: rgb(198, 220, 242);
+    margin: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px rgba(34, 82, 180, 0.519);
+}
+.teacher p{
+    text-align: justify;
+    font-size: 15px;
+}
+
+
+  /* Teacher Table */
+  table{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    background: rgb(174, 220, 251);
+  }
+  thead{
+    border: 2px solid black;
+    margin: 3px;
+  }
+  tbody{
+    border: 2px solid black;
+    margin: 3px;
+  }
+  td{
+    border-radius: 2px solid black;
+    padding-left: 6px;
+  }
+
+
+
+
+
+  @Media only screen and (max-width:800px)
+  {
+    .teachers{
+        width: 95%;
+    }
+    
+table{
+    font-size: 12px;
+    width: 95%;
+}
+  }

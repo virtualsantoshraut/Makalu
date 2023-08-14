@@ -1,0 +1,73 @@
+section{
+    display: flex;
+    background-image: url(/img/background3.png);
+    background-size: 100%;
+}
+.heading{
+    text-align: center;
+    justify-content: space-around;
+    padding-top: 5%;
+    font-size: 30px;
+    padding-bottom: 5%;
+}
+.alumniofmas{
+    display: flex;
+    justify-content: space-around;
+}
+.individual{
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+    
+    
+}
+.leftsection.event,
+.rightsection.event{
+ background-color: rgba(174, 219, 239, 0.101);
+ border-radius: 10px;
+ margin: 20px;
+ box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+ 
+}
+.profile{
+    width: 30%;
+}
+.profile img{
+    width: 100%;
+}
+
+
+.person img{
+    width: 20%;
+    border-radius: 100px;
+}
+
+.person{
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+    background-color: rgba(0, 255, 110, 0.074);
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.289);
+    padding: 10px;
+
+}
+.person P{
+    text-align: justify;
+    padding: 20px;
+
+}
+
+/* Responsiveness  */
+
+@Media only screen and(max-width:500px)
+{
+    .person{
+        width: 97%;
+    }
+    .person p{
+        font-size: 14px;
+    }
+
+}

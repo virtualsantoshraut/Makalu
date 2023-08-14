@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="/css/homestyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/faculty.css">
+  <link rel="stylesheet" href="/css/about.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+
+</head>
+
+<body>
+  <nav class="header flex justify-between items-center p-4">
+    <div class="upperpart">
+      <div class="first">
+        <div class="home">
+          <p class="text-lg font-bold" style="cursor:pointer;" onclick="window.location.href='index.html'">Home</p>
+        </div>
+        <div class="upperleft">
+          <p class="text-lg font-bold" style="cursor:pointer;" onclick="window.location.href='facultyandstaff.html'">
+            Faculty & Staff</p>
+        </div>
+        <div class="uppermiddle">
+          <p style="cursor: pointer;" class="text-lg font-bold" onclick="window.location.href='alumni.html'">Alumni</p>
+        </div>
+        <div class="acedemics">
+          <p class="text-lg font-bold" style="cursor: pointer;" onclick="window.location.href='acedemics.html'">
+            Acedemics</p>
+        </div>
+
+      </div>
+
+      <div class="uppersocialmedia" style="align-items: center; display: flex; justify-content:end;">
+        <img src="../img/facebook image1.png" style="width: 10%; cursor: pointer;" alt=""
+          onclick="window.location.href='https://www.facebook.com/makalu.arun'">
+        <img src="../img/Youtube imagge.png" style="width: 10%; cursor:pointer;"
+          onclick="window.location.href='https://www.youtube.com/@eakughimire5118/featured'">
+      </div>
+    </div>
+
+    <div class="lowerpart">
+      <div class="lowerleft">
+        <img src="../img/makaluarunlogo1.png" alt="Makalu Arun School logo" class="w-20" style="width: 100%; ">
+      </div>
+      <div class="lowermiddle">
+        <p class="text-lg font-bold" style="cursor: pointer;" onclick="window.location.href='about.html'">About</p>
+      </div>
+      <div class="admission">
+        <p class="admission paragraph" style="cursor:pointer;" onclick="window.location.href='admission.html'">
+          Admission
+        </p>
+
+      </div>
+
+      <div class="calender">
+        <p style="cursor: pointer;" onclick="window.location.href='academiccalender.html'">Academic Calendar</p>
+      </div>
+    </div>
+  </nav>
+
+
+  <nav class="mobileheader">
+    <div class="mobiledefault">
+      <div class="mobileleft">
+        <img src="../img/makaluarunlogo1.png" alt="Makalu Arun School logo" class="w-20" style="width: 100%; ">
+
+
+      </div>
+      <!-- Hamburger icon -->
+      <div class="hamburger-icon" id="hamburger" onclick="toggleNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+    </div>
+    <div class="mobilemenu" id="mobileMenu">
+      <div class="mobileli">
+        <p class="text-lg font-bold" style="cursor:pointer;" onclick="window.location.href='index.html'">Home</p>
+      </div>
+      <div class="mobileli">
+        <p class="text-lg font-bold" style="cursor:pointer;" onclick="window.location.href='facultyandstaff.html'">
+          Faculty & Staff</p>
+      </div>
+      <div class="mobileli">
+        <p style="cursor: pointer;" class="text-lg font-bold" onclick="window.location.href='alumni.html'">Alumni</p>
+      </div>
+      <div class="mobileli">
+        <p class="text-lg font-bold" style="cursor: pointer;" onclick="window.location.href='acedemics.html'">
+          Acedemics</p>
+      </div>
+
+      <div class="mobileli">
+        <p class="text-lg font-bold" style="cursor: pointer;" onclick="window.location.href='about.html'">About</p>
+      </div>
+      <div class="mobileli">
+        <p class="admission paragraph" style="cursor:pointer;" onclick="window.location.href='admission.html'">
+          Admission
+        </p>
+
+      </div>
+
+      <div class="mobileli">
+        <p style="cursor: pointer;" onclick="window.location.href='academiccalender.html'">Academic Calendar</p>
+      </div>
+    </div>
+
+   <script>
+    function toggleNav() {
+      var mobileMenu = document.getElementById("mobileMenu");
+  var hamburgerIcon = document.getElementById("hamburger");
+  
+  if (mobileMenu.style.display === "block") {
+    mobileMenu.style.display = "none";
+    hamburgerIcon.classList.remove("active");
+  } else {
+    mobileMenu.style.display = "block";
+    hamburgerIcon.classList.add("active");
+  }
+}
+
+   </script>
+
+  </nav>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Click event for menu items
+      $(".menu-item a").on("click", function (event) {
+        event.preventDefault();
+        const targetUrl = $(this).attr("href");
+        window.location.href = targetUrl;
+      });
+
+      // Click event for social media links
+      $(".uppersocialmedia a").on("click", function (event) {
+        event.preventDefault();
+        const targetUrl = $(this).attr("href");
+        window.open(targetUrl, "_blank");
+      });
+    });
+  </script>
+
+  <section>
+    <div class="heading">
+      <h3>Makalu , A Reputed School in Sankhuwasabha</h3>
+    </div>
+    <div class="paragraph">
+
+      <p class="essaycontent">Makalu Arun School stands tall as a significant educational hub in the Sankhuwasabha
+        district, nestled within Chainpur Municipality. For the rural communities yearning for English medium education
+        for their children, this institution has been nothing short of a boon. The school's core mission revolves around
+        ensuring the 'right to education' for every child while focusing on their holistic development. With an emphasis
+        on practical education and a child-friendly environment, Makalu Arun School has carved its place as a fruitful
+        and nurturing educational establishment.</p> <br>
+      <p class="essaycontent">Established in the year 2065 BS, Makalu Arun School's primary objective has been to
+        provide quality education to all, without any discrimination. Under the able guidance of its principal, Mr.
+        Sundar Kumar Shrestha, the school has embarked on a decade-long journey, nurturing and molding hundreds of
+        students for a promising future. The school's educational journey has garnered immense praise, and its students
+        have emerged as strong contenders, even when competing with students from reputed urban schools. In recent
+        years, and most notably this year, Makalu Arun School achieved the best results in the Secondary Education
+        Examination (SEE) throughout the district. Currently, the school boasts an enrollment of approximately 350
+        students, eager to partake in its enriching academic environment.</p> <br>
+      <p class="essaycontent">The crux of Makalu Arun School's success lies in its effective teaching and learning
+        process. The teachers, highly qualified and experienced with exemplary academic qualifications, have mastered
+        the art of catering to students' unique psychological understandings. While academic excellence remains a
+        priority, the school's focus extends beyond that to encompass the all-round development of its students. To
+        facilitate their studies, the school provides a well-equipped library, a state-of-the-art science lab, and a
+        computer hall. Moreover, Makalu Arun School believes in practical education and regularly organizes scheduled
+        educational tours, field visits, science exhibitions, and other hands-on experiences.</p> <br>
+      <p class="essaycontent">Every Friday, the school takes a break from the conventional routine and engages in weekly
+        extra-curricular activities to boost students' overall performance. These events include dance competitions,
+        quiz contests, debate competitions, spelling contests, aptitude tests, and various indoor and outdoor sports
+        activities. Such activities not only add an element of fun to the learning process but also instill valuable
+        life skills in the students.</p> <br>
+      <p class="essaycontent">A child-friendly environment is the cornerstone of modern education, and Makalu Arun
+        School has taken this principle to heart. To ensure a conducive learning environment, the school has separate
+        buildings and playgrounds for junior and senior students. It also provides essential amenities such as a
+        well-maintained canteen, clean washrooms/toilets, and access to pure drinking water. Safety is of utmost
+        importance, and students are closely monitored to prevent any accidents. The school also emphasizes values like
+        cleanliness, teamwork, dutifulness, honesty, and responsiveness while nurturing a love for nature.</p> <br>
+      <p class="essaycontent">One remarkable aspect that sets Makalu Arun School apart from others is its commitment to
+        maintaining an English-speaking environment at all times. The students are immersed in an English-language
+        atmosphere, fostering their language skills from an early age, and preparing them for a globalized world.</p>
+      <br>
+      <p class="essaycontent">In conclusion, Makalu Arun School stands as a well-managed institution, offering abundant
+        services with a focus on education rather than profits. For a decade, it has illuminated the path of education,
+        cutting through the darkness of ignorance and transforming the lives of countless children. Despite facing
+        challenges and shortcomings, the school remains steadfast in its dedication to providing the best education to
+        its students using all available means.</p> <br>
+      <p class="essaycontent">Makalu Arun School serves as a shining example of how education can shape young minds and
+        create a brighter future for the community and the country at large. With its continuous efforts to promote
+        academic excellence, all-round development, and a child-friendly environment, it is a beacon of hope and
+        progress in the field of education.</p> <br>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="firstfooter">
+      <div class="firstfooterleft">
+        <a href="mailto:info@makaluarun.com">
+          <div class="contactimage"><img src="/img/mail.png" alt="mail">
+            <p>info@makaluarun.com</p>
+          </div>
+        </a>
+        <a href="tel:986228653">
+          <div class="contactimage"><img src="/img/phone.png" alt="phoneimage">
+            <p>All Nepal phone No:9862281653</p>
+          </div>
+        </a>
+        <a href="https://wa.me/9862281653">
+          <div class="contactimage"><img src="/img/whatsapp.png" alt="whatsapp">
+            <p>whatsapp: 9862281653</p>
+          </div>
+        </a>
+
+        <div class="follow">
+          <p>Follow Us:</p> <br>
+          <a href="https://www.facebook.com/makalu.arun"><img src="/img/facebook image.png" alt="facebook image"
+              ></a>
+        </div>
+      </div>
+      <div class="firstfooterright">
+        <h4>Need Help?</h4>
+
+        <p><a href="faq.html" target="_blank">FAQs</a>
+        </p>
+
+      </div>
+    </div>
+    <div class="secondfooter">
+      <p>&copy; https://makaluarunschool.edu.np. Education for Creative Knowledge and Skills. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

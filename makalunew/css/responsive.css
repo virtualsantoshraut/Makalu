@@ -1,0 +1,81 @@
+@Media only screen and (max-width:925px)
+{
+body{
+    width: 100%;
+}
+/* nav upperpart responsiveness */
+.upperpart{
+align-items: center;
+justify-content: center;
+        
+    }
+.first{
+    margin-left: 25%;
+    font-size: 20px;
+    flex-direction: column;
+    text-align: center;
+ 
+   
+}
+.uppersocialmedia{
+    display: none;
+}
+.uppersocialmedia img{
+    display: none;
+}
+
+
+/* nav upperpart responsiveness */
+.lowerpart{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* footer responsiveness */
+.firstfooterleft{
+ width: 80%;  
+}
+.firstfooterleft img{
+    width: 60%;
+}
+.firstfooterright{
+    width: 20%;
+}
+
+/* footer follow responsiveness */
+.follow{
+    width: 100%;
+
+}
+.follow img{
+ width: 10%;
+}
+
+/* footer second section responsiveness */
+
+.secondfooter{
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-around;
+
+}
+.secondfooter P{
+    text-align: center;
+    font-size: 10px;
+}
+
+
+.mobileheader{
+    padding: 10px;
+    bottom: 5px;
+    /* background-color: aliceblue; */
+    display: block;
+}
+.header{
+    display: none;
+}
+
+}

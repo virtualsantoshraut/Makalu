@@ -1,0 +1,27 @@
+.heading{
+    text-align: center;
+    justify-content: space-around;
+    padding-top: 5%;
+    font-size: 30px;
+}
+.paragraph{
+    margin: 10%;
+    text-align: justify;
+}
+section{
+    background-image: url(/img/background3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 20px;
+}
+
+
+@Media only screen and (max-width:500px)
+{
+    .heading{
+        font-size: 20px;
+    }
+    section{
+        font-size: 14px;
+    }
+}

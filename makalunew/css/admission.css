@@ -1,0 +1,32 @@
+/* heading  */
+
+.heading{
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 20px 4px;
+
+}
+.content{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+.content p{
+    text-align: justify;
+    padding: 10px;
+    font-size: 15px;
+}
+
+@Media only screen and (max-width:700px)
+{
+    .content{
+        display: block;
+        width: 90%;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+}
